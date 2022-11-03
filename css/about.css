@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+nav{
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    width: 80px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+.nav-content .togglebutton,
+.nav-content span a{
+    height: 60px;
+    width: 60px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px gray;
+}
+nav .nav-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(135deg);
+}
+.togglebutton i{
+    transform: rotate(226deg);
+}
+.nav-content .togglebutton{
+    font-size: 25px;
+    color: cornflowerblue;
+    z-index: 100;
+    cursor: pointer;
+   transform: rotate(-220deg);
+   transition: all 0.6s ease;
+}
+nav.open .togglebutton{
+    transform: rotate(0deg);
+}
+.nav-content span{
+    position: absolute;
+     transition: all 0.6s ease;
+}
+nav.open .nav-content span{
+    transform: rotate(calc(var(--i) * (360deg/8))) translateY(120px); 
+}
+.nav-content span a{
+    text-decoration: none;
+    transform: rotate(224deg);
+}
+.nav-content span a i{
+    font-size: 20px;
+    color: green;
+    transform: rotate(calc(var(--i) * (360deg/-8))); 
+    opacity: 0.8;
+    transition: 0.2s;
+}
+.nav-content span a:hover i{
+    opacity: 1;
+}
+
+.grad1{
+    width: 100%;
+    height: 600px;
+    background-image: url(../img/macbook-air_specs__bm5pm56qlrpy_og-removebg-preview.png);
+    background-size: cover;
+}
+.grad2{
+    width: 100%;
+    height: 150vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.425) 50%, transparent 100%);
+}
